@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body style="font-family: sans-serif">
+        <h1>XML External Entity (XXE) Demo </h1>
+        <h3>This site include two very simple (GET) endpoints:</h3>
+        <a id="a1" href="">/api/person</a>
+        <br/>
+        <a id="a2" href="">/api/person/0</a>
+        <p>The API also includes a POST-endpoint, so you should test the two endpoints above, using POSTMAN, to prepare yourself for the exercises! </p>
+        <script>
+            var url = window.location;
+            document.getElementById("a1").href = url+"api/person";
+            document.getElementById("a2").href = url+"api/person/0";
+        </script>
+    </body>
+
+</html>
