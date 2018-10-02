@@ -21,6 +21,7 @@ public class PersonResource {
   static volatile int nextId = 0;
 
   static {
+    System.out.println("-----------------------------");
     Person p = new Person("Kurt", "Wonnegut", 45);
     p.setId(nextId);
     persons.put(nextId++, p);
@@ -42,7 +43,7 @@ public class PersonResource {
   @GET
   @Path("{id}")
   @Produces(MediaType.APPLICATION_XML)
-  public Person retrieveBook(@PathParam("id") int id) {
+  public Person getPerson(@PathParam("id") int id) {
     return persons.get(id);
   }
 
